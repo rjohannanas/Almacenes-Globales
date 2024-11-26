@@ -1,0 +1,729 @@
+{
+	"info": {
+		"_postman_id": "b6214455-5bd5-4421-bf9d-8dd8a571726b",
+		"name": "PROYECTO 04",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38876606"
+	},
+	"item": [
+		{
+			"name": "AgregarProducto_ExisteProducto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Laptop\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Producto/agregar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Producto",
+						"agregar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarProducto_NoExisteCategoria",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Mouse\",\r\n    \"idcategoria\":20\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Producto/agregar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Producto",
+						"agregar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarProducto_Correctamente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Mouse\",\r\n    \"descripcion\":\"mouse inalambrico\",\r\n    \"idcategoria\":1,\r\n    \"precio\":30,\r\n    \"costoalmacen\":12\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Producto/agregar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Producto",
+						"agregar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarProducto_NoExisteId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idproducto\":100,\r\n    \"nombre\":\"MouseI\",\r\n    \"descripcion\":\"Mouse negro inalambrico\",\r\n    \"idcategoria\":1,\r\n    \"precio\":30,\r\n    \"costoalmacen\":15\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Producto/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Producto",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarProducto_Correcta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idproducto\":1009,\r\n    \"nombre\":\"MouseI\",\r\n    \"descripcion\":\"Mouse negro inalambrico\",\r\n    \"idcategoria\":1,\r\n    \"precio\":30,\r\n    \"costoalmacen\":15\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Producto/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Producto",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarProdcuto_NoExisteID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idproducto\":100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Producto/eliminar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Producto",
+						"eliminar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarProdcuto_Correctamente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idproducto\":1009\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Producto/eliminar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Producto",
+						"eliminar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultaIDProducto_Noexiste",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Producto/consultaid?id=50",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Producto",
+						"consultaid"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultaIDProducto_Correcto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Producto/consultaid?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Producto",
+						"consultaid"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultaListaProducto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Producto/consultalista",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Producto",
+						"consultalista"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StockConsulta_ID No existe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idproducto\": 999\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Stock/consulta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Stock",
+						"consulta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StockConsulta_Cantidad",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idproducto\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Stock/consulta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Stock",
+						"consulta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StockActualizar_ID No existe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idproducto\":100,\r\n    \"max\":30,\r\n    \"min\":10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Stock/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Stock",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StockUpdate_ID Existe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idproducto\":5,\r\n    \"max\":31,\r\n    \"min\":9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Stock/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Stock",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarEntrada_NoExiste IdUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idusuario\":999\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Entrada/compra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Entrada",
+						"compra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarEntrada_NoPermiso",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idusuario\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Entrada/compra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Entrada",
+						"compra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarEntrada_NoExisteIdProducto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idusuario\":4,\r\n    \"idproducto\":999\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Entrada/compra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Entrada",
+						"compra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarEntrada_NoExisteIdAsociado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idusuario\":4,\r\n    \"idproducto\":1010,\r\n    \"idasociado\":9999\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Entrada/compra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Entrada",
+						"compra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarEntrada_NoEsProveedor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idusuario\":4,\r\n    \"idproducto\":1010,\r\n    \"idasociado\":5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Entrada/compra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Entrada",
+						"compra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarEntrada_Correctamente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idproducto\":1010,\r\n    \"cantidad\":5,\r\n    \"maxstock\":100,\r\n    \"minstock\":50,\r\n    \"idasociado\":4,\r\n    \"idusuario\":4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Entrada/compra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Entrada",
+						"compra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarEntrada_CorrectamenteDev",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idproducto\":1010,\r\n    \"cantidad\":1,\r\n    \"maxstock\":100,\r\n    \"minstock\":50,\r\n    \"idasociado\":4,\r\n    \"idusuario\":4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Entrada/devolucioncliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Entrada",
+						"devolucioncliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReporteInventario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Reporte/inventario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Reporte",
+						"inventario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReporteProducto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Reporte/producto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Reporte",
+						"producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReporteAlmacen",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Almacen/reporte",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Almacen",
+						"reporte"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReporteFecha",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/Reporte/fecha?fechaInicio=2024-01-01&fechaFin=2024-12-31\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Reporte",
+						"fecha"
+					],
+					"query": [
+						{
+							"key": "fechaInicio",
+							"value": "2024-01-01"
+						},
+						{
+							"key": "fechaFin",
+							"value": "2024-12-31\n"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
